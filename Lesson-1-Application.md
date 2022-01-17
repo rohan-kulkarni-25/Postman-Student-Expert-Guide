@@ -12,7 +12,7 @@
 <li>In this mail you will get link to Postman Workspace of Student Expert Collection</li>
 <li>You will navigate to the link and fork the collection in your workspace</li>
 <img src='./Images/lesson_1_3.png'>
-<li>After Opening the collection you will click on fork and provide a label (optional) and select your workspace to forking collection.</li>
+<li>After Opening the collection you will click on fork and provide a label and select your workspace to forking collection.</li>
 <li>Forking a Collection means Creating your copy of collection.</li>
 <li>And you are all set to go.</li>
 </ul>
