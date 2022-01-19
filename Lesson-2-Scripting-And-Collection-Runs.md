@@ -115,7 +115,7 @@ GET https://6d338fbc-93bd-456e-85a0-818bd4cd3177.mock.pstmn.io/player?id=-1
 <h1>GET STATS</h1>
 
 <ul>
-<li>Send the request.<li>
+<li>Send the request.</li>
 <li>First thing we need to do is that we need to add the status check test in all three request of this folder.We have added it to get all player so add it to get specific player and to get stats</li>
 </ul>
 
