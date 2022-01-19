@@ -18,6 +18,7 @@ pm.test('Status code is 200', function () {
     pm.response.to.have.status(200); 
 });
 ```
+    
 <li>This test will check that is the status code of the response coming from the API is 200 or not if it is not 200 then the test will fail</li>
 
 <li>When you will send the request the test will pass becuase the response is 200.</li>
@@ -29,6 +30,7 @@ pm.test('Status code is 400', function () {
     pm.response.to.have.status(400); 
 });
 ```
+    
 <li>After sending this test you will get test failed response because the status is 200 and we are asking to test for status 400</li>
 <li>You have to save this request and open the GET SPECIFIC PLAYER Request</li>
 <li>Make sure you save the request with code 400</li>
@@ -78,6 +80,7 @@ pm.environment.set('player_id', player_list[Math.floor(Math.random() * player_li
 ```
 if(!pm.variables.get('player_id')) pm.variables.set('player_id', -1);
 ```
+    
 <li>Write this script in pre-request script section of get specific player request. This will check that is player id variable present and if it is not present then it will set player id variable as -1</li>
 <li>To check this pre-request script we will change our environment to no environment and send request 2 times.</li>
 <li>When you check the player id now it is resolved now open console which is present in left bottom. And check the last request it will be like this</li>
@@ -85,6 +88,7 @@ if(!pm.variables.get('player_id')) pm.variables.set('player_id', -1);
 ```
 GET https://6d338fbc-93bd-456e-85a0-818bd4cd3177.mock.pstmn.io/player?id=-1
 ```
+    
 <li>As we can see inplace of player id -1 was sent it means that our pre request script was successfully executed.</li>
 <li>Now you need to provide a description to this request.</li>
 <li>Go to documentation which is on right side below the eye logo click on it and when you hover below the url you will be able to get a pencile icon to edit it you can just write anything into description like "Learning API DEVELOPMENT" and anything related to this request.</li>
@@ -103,6 +107,7 @@ pm.test('Status code is 200', function () {
     pm.response.to.have.status(200); 
 });
 ```
+    
 <li>Make sure you save each request</li>
 <li>Now you need to add one more test in Get stats request which will check that does the data contains all the required fileds</li>
 
@@ -112,6 +117,7 @@ pm.test('Stats include all fields', function () {
     pm.expect(jsonData).to.have.all.keys('won', 'lost', 'drew');
 });
 ```
+    
 <li>Test tab in the GET STATS Request will look like this</li>
 
 ```
