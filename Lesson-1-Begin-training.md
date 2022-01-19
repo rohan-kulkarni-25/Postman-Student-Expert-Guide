@@ -28,10 +28,13 @@ GET {{training_api}}/matches
 <ul>
 <li>When you send the request you get data about matches. You can also read more in VISULIZE</li>
 <li>Our first task is to get the matches with status as pending. We can do this with help of query parameters</li>
+</ul>
 
 ```
 GET {{training_api}}/matches?status=pending
 ```
+
+<ul>
 <li>You need to send this route.You will get the matches which are pending as a response.</li>
 <li>This is how you can sort data coming from API ( The sorting must be provided by the server also. )</li>
 <li>You need to save this request and create a new request "2. Add match</li>
@@ -41,24 +44,31 @@ GET {{training_api}}/matches?status=pending
 
 <ul>
 <li>You need to send a POST Request now</li>
+</ul>
 
 ```
 POST {{training_api}}/match
 ```
+
+<ul>
 <li>This will give you authentication error because we need to be authenticated to get some response for this request. You can understand auth as login to account.</li>
 
 <li>Click on three dots near collection name and this will give you option to edit then click on that.</li>
 <li>When you see under authorization you can see key as matchkey and value as emailkey which means you need to provide your email as emailkey</li>
 <li>We need to create a varible with name emailkey and value as email we used for registration.</li>
 <li>Click on variable tab and create a new variable under training_api.</li>
+</ul>
 
 ```
 variable : email_key
 initial_value : rohank2502@gmail.com
 ```
+
+<ul>
 <li>Now after sending requst it will give you Bad Request - Check your body data because in POST request we need to provide some data in body.</li>
 <li>Click on BODY then Click on TEXT and convert it to JSON</li>
 <li>Add the given object in the body and send request again.</li>
+</ul>
 
 ```
 {
@@ -68,6 +78,7 @@ initial_value : rohank2502@gmail.com
 }
 ```
 
+<ul>
 <li>This time you will see SUCCESS MESSAGE. You can check about the added data in get matches request.</li>
 <li>Now next step is PUT Request.Save this request and create a new request "3. Update Score"</li>
 </ul>
@@ -82,19 +93,25 @@ PUT {{training_api}}/match
 <li>When you send this PUT request you will get an error which will ask you to provide match id.</li>
 <li>You can go to GET request and then send it again and copy the match id of the match you added ( ONLY MATCH YOU ADDED CAN BE UPDATED BY YOU )</li>
 <li>You need to provide this id as params</li>
+</ul>
 
 ```
 PUT {{training_api}}/match?match_id=LwDlF-mHt
 ```
+
+<ul>
 <li>Your request will look like this.</li>
 <li>This reqeust will give you error becuase in PUT requset you need to send data to be updated in body</li>
 <li>Go to body select raw and type as json</li>
+</ul>
 
 ```
 {
     "points":3
 }
 ```
+
+<ul>
 <li>Send this Object as JSON</li>
 <li>You will get a success message now. Next Task is to DELETE the match.</li>
 <li>Don't forget to save this request and create a new request "4. Remove match"</li>
@@ -109,10 +126,13 @@ DELETE {{training_api}}/match/:match_id
 
 <ul>
 <li>You need to pass this request in DELETE and this will delete the match with this id. ( YOU CAN ONLY DELETE THE MATCH YOU ADDED )</li>
+</ul>
 
 ```
 /:match_id
 ```
+
+<ul>
 <li>This is a PATH Variable which will help to know which match you want to delete.</li>
 <li>That's it for this part and you will save the request and move to the next part.</li>
 </ul>
