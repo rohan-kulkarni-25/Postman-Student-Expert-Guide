@@ -32,6 +32,7 @@ GET {{training_api}}/matches
 ```
 GET {{training_api}}/matches?status=pending
 ```
+  
 <li>You need to send this route.You will get the matches which are pending as a response.</li>
 <li>This is how you can sort data coming from API ( The sorting must be provided by the server also. )</li>
 <li>You need to save this request and create a new request "2. Add match</li>
@@ -45,6 +46,7 @@ GET {{training_api}}/matches?status=pending
 ```
 POST {{training_api}}/match
 ```
+  
 <li>This will give you authentication error because we need to be authenticated to get some response for this request. You can understand auth as login to account.</li>
 
 <li>Click on three dots near collection name and this will give you option to edit then click on that.</li>
@@ -56,6 +58,7 @@ POST {{training_api}}/match
 variable : email_key
 initial_value : rohank2502@gmail.com
 ```
+  
 <li>Now after sending requst it will give you Bad Request - Check your body data because in POST request we need to provide some data in body.</li>
 <li>Click on BODY then Click on TEXT and convert it to JSON</li>
 <li>Add the given object in the body and send request again.</li>
@@ -86,6 +89,7 @@ PUT {{training_api}}/match
 ```
 PUT {{training_api}}/match?match_id=LwDlF-mHt
 ```
+  
 <li>Your request will look like this.</li>
 <li>This reqeust will give you error becuase in PUT requset you need to send data to be updated in body</li>
 <li>Go to body select raw and type as json</li>
@@ -95,6 +99,7 @@ PUT {{training_api}}/match?match_id=LwDlF-mHt
     "points":3
 }
 ```
+  
 <li>Send this Object as JSON</li>
 <li>You will get a success message now. Next Task is to DELETE the match.</li>
 <li>Don't forget to save this request and create a new request "4. Remove match"</li>
@@ -113,6 +118,7 @@ DELETE {{training_api}}/match/:match_id
 ```
 /:match_id
 ```
+  
 <li>This is a PATH Variable which will help to know which match you want to delete.</li>
 <li>That's it for this part and you will save the request and move to the next part.</li>
 </ul>
